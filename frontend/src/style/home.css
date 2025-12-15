@@ -1,0 +1,44 @@
+.content{
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Introduction{
+    font-size: 1.5em;
+    margin-bottom: 10vh
+}
+
+.Introduction p{
+    font-size: .8em;
+    width: 130px;
+    text-align: left;
+    margin-bottom: 1em;
+    padding:1em;
+    background-color: #1c1c1c;
+    border-radius: 1em;
+    box-shadow: 0px 0px 10px #1c1c1c;
+
+}
+
+#textarea{
+    width: 50vw;
+    height: 24px;
+    padding: 0.5em 1.5em;
+    font-size: 18px;
+    border-radius: 1em;
+    border: none;
+    text-wrap: wrap;
+}
+
+button{
+    width: 10vw;
+    height: 24px;
+    padding: 0.5em 1.5em;
+    font-size: 18px;
+    border-radius: 1em;
+    border: none;
+    text-wrap: wrap;
+}
