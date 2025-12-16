@@ -46,7 +46,7 @@ nav {
     align-items: center;
     justify-content: center;
     position: absolute;
-    padding:15vh 1vw 5vh 8vw;
+    padding:1vh 1vw 5vh 5vw;
     background-color: var(--accent-color);
     font-weight: bold;
     z-index: 0;
@@ -80,11 +80,11 @@ nav {
     color: var(--secondary-color);
 }
 
-.holder{
+/* .holder{
     height: 5em;
     width: 6em;
     flex-grow: 1;
-}
+} */
 
 .hidden{
     right: -100%;

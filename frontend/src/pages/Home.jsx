@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import "../style/home.css";
+import { FiCornerRightUp } from "react-icons/fi";
 
 function Home() {
     return (
@@ -13,7 +14,7 @@ function Home() {
                 </div>
                 <form action="">
                     <input id="textarea" type="text" placeholder="Type your question" />
-                    <button></button>
+                    <button id="send"><FiCornerRightUp /></button>
                 </form>
             </div>
         </>
