@@ -1,0 +1,9 @@
+Title: Skills – AI and Machine Learning
+Category: Skills
+Tags: ai, ml, deep-learning
+
+Aayush has practical experience working with artificial intelligence and machine learning concepts through academic coursework and projects.
+
+His skill set includes machine learning fundamentals, deep learning models, generative AI techniques, and natural language processing concepts. He has applied these skills in projects involving data preprocessing, model training, evaluation, and experimentation.
+
+He is particularly interested in applied machine learning, and building AI-driven systems that solve real-world problems.

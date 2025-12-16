@@ -1,0 +1,9 @@
+Title: Aayush Dutta
+Category: Profile
+Tags: identity, overview
+
+Aayush Dutta is a fourth-year Computer Science Engineering student secializing in artificial intelligence, machine learning
+
+He focuses on building practical, real-world projects that combine data, AI models, and clean system design. His academic interests include machine learning, natural language processing, deep learning, and generative AI, with a focus on applied software development, data analysis, and system design.
+
+He enjoys exploring ideas beyond pure academics, including design, content creation and event curating. Aayush values independent learning, clarity in communication, and building systems that are both technically sound and user-focused.

@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+__pycache__
+.ipynb_checkpoints
+llm_env
+chroma_db

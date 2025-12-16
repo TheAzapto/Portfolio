@@ -1,0 +1,9 @@
+Title: Project – Indian Textile Motif Generation using GAN
+Category: Project
+Tags: gan, deep-learning, generative-ai, computer-vision
+
+This project focuses on generating Indian textile motifs using Generative Adversarial Networks (GANs).
+
+Aayush designed and trained a GAN model to learn traditional textile patterns and generate new, visually coherent motifs inspired by the original dataset. The project involved data preprocessing, model training, evaluation, and iterative refinement of generated outputs.
+
+The primary objective was to explore how generative AI can be applied to preserve and reimagine cultural design patterns. Through this project, Aayush gained hands-on experience with deep learning workflows, GAN architectures, and working with visual datasets.
