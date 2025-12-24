@@ -2,7 +2,6 @@ import { useState } from "react"
 
 
 function Test() {
-    const [content, setContent] = useState("")
     const [answer, setAnswer] = useState("")
     const [isLoading, setIsLoading] = useState(false);
 
@@ -32,7 +31,6 @@ function Test() {
                 const { done, value } = await reader.read();
                 if (done) break;
                 const chunk = decoder.decode(value);
-                console.log(chunk)
                 setAnswer((prev) => prev + chunk);
             }
         }
@@ -47,7 +45,7 @@ function Test() {
 
     return (
         <div>
-            <p id="content">{answer}</p>
+            <p>{answer}</p>
             <input type="text" id="query" />
             <button onClick={handleSend}>Send</button>
         </div >
@@ -55,3 +53,11 @@ function Test() {
 }
 
 export default Test
+
+// export default function Test() {
+//     return (
+//         <div>
+//             <p>Test</p>
+//         </div>
+//     )
+// }

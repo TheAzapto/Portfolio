@@ -13,7 +13,10 @@
 
   --primary-color: #242424;
   --secondary-color: #e3e3e3;
-  --accent-color: #d10404;
+  --accent-color: #d1040488;
+
+  --chat-background-color: #31313188;
+  --response-background-color: #31313188;
 }
 
 body {
