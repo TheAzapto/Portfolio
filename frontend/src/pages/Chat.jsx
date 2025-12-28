@@ -19,19 +19,19 @@ function Chat() {
 
     const handleSend = async (e) => {
         e.preventDefault();
-        
+
         const queryInput = document.getElementById("query");
         const query = queryInput.value.trim();
-        
+
         if (!query) return;
 
         // Add user message to chat
         const userMessage = { role: "user", content: query };
         setMessages((prev) => [...prev, userMessage]);
-        
+
         // Clear input
         queryInput.value = "";
-        
+
         setIsLoading(true);
         setCurrentResponse("");
 
@@ -55,7 +55,7 @@ function Chat() {
             while (true) {
                 const { done, value } = await reader.read();
                 if (done) break;
-                
+
                 const chunk = decoder.decode(value);
                 // Parse SSE format (data: content\n\n)
                 const lines = chunk.split('\n');
@@ -75,9 +75,9 @@ function Chat() {
 
         } catch (error) {
             console.error("Error:", error);
-            const errorMessage = { 
-                role: "bot", 
-                content: "Sorry, I encountered an error. Please try again." 
+            const errorMessage = {
+                role: "bot",
+                content: "Sorry, I encountered an error. Please try again."
             };
             setMessages((prev) => [...prev, errorMessage]);
         } finally {
@@ -90,20 +90,20 @@ function Chat() {
             <Navbar />
             <div className="content">
                 <div className="Introduction">
-                    <h1 style={{ textAlign: "center"}}>Welcome to My Mind</h1>
-                    <span style={{ display: "flex", justifyContent: "space-around", maxWidth: "50vw", minWidth: "40vw"}}>
+                    <h1 style={{ textAlign: "center" }}>Welcome to My Mind</h1>
+                    <span style={{ display: "flex", justifyContent: "space-around", maxWidth: "50vw", minWidth: "40vw" }}>
                         <p>To Get to know me better, You can ask me anything</p>
                         <p>Just type your question in the box below</p>
                         <p>AayushBot will try its best to answer your question</p>
                     </span>
                 </div>
-                
-                <div 
-                    className="chat-container" 
+
+                <div
+                    className="chat-container"
                     ref={chatContainerRef}
-                    style={{ 
-                        height: "50vh", 
-                        overflowY: "auto", 
+                    style={{
+                        height: "50vh",
+                        overflowY: "auto",
                         padding: "20px",
                         display: "flex",
                         flexDirection: "column",
@@ -111,15 +111,15 @@ function Chat() {
                     }}
                 >
                     {messages.length === 0 && !isLoading && (
-                        <div style={{ 
-                            textAlign: "center", 
-                            color: "#888", 
-                            marginTop: "50px" 
+                        <div style={{
+                            textAlign: "center",
+                            color: "#888",
+                            marginTop: "50px"
                         }}>
                             <p>Start a conversation by asking a question!</p>
                         </div>
                     )}
-                    
+
                     {messages.map((msg, index) => (
                         <div
                             key={index}
@@ -133,7 +133,7 @@ function Chat() {
                             </div>
                         </div>
                     ))}
-                    
+
                     {/* Show streaming response */}
                     {isLoading && (
                         <div style={{ display: "flex", justifyContent: "flex-start" }}>
@@ -145,17 +145,19 @@ function Chat() {
                 </div>
 
                 <form onSubmit={handleSend} style={{ marginTop: "20px" }}>
-                    <input 
-                        id="query"
-                        type="text" 
-                        placeholder="Type your question" 
-                        disabled={isLoading}
-                    />
-                    <button type="submit" disabled={isLoading}>
-                        <FiCornerRightUp />
-                    </button>
-                </form>
-            </div>
+                    <div className='inputarea'>
+                        <input
+                            id="query"
+                            type="text"
+                            placeholder="Type your question"
+                            disabled={isLoading}
+                        />
+                        <button id='send-button' type="submit" disabled={isLoading}>
+                            <FiCornerRightUp />
+                        </button>
+                    </div>
+                </form >
+            </div >
         </>
     );
 }

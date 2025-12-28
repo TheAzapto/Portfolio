@@ -13,11 +13,13 @@
 
   --primary-color: #242424;
   --secondary-color: #e3e3e3;
-  --accent-color: #d1040488;
+  --accent-color: #ae00ff;
+  --accent-glow-color: #cfabff;
 
   --chat-background-color: #31313188;
   --response-background-color: #31313188;
 }
+
 
 body {
     margin: 0;
@@ -26,4 +28,10 @@ body {
     overflow: hidden;
 }
 
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
