@@ -1,0 +1,176 @@
+Academic Projects Portfolio
+
+Aayush Dutta has worked on several significant technical projects during his time at NIIT University, demonstrating his skills in full-stack development, artificial intelligence, machine learning, and data science. These projects showcase his ability to tackle complex problems and implement end-to-end solutions.
+
+Finnalyze - Stock Market Impact Predictor (September 2025 - Present)
+
+Finnalyze is Aayush's capstone project at NIIT University and represents his most ambitious and comprehensive technical work to date. This is an ongoing project that aims to predict NSE (National Stock Exchange) stock prices using a combination of sentiment analysis and time-series forecasting.
+
+Project Architecture:
+
+The project is structured around three major components that work together to provide stock predictions:
+
+1. Frontend (React + Node.js + Express.js):
+The user-facing interface is built as a MERN-influenced stack application that serves as an interactive dashboard. Users can view predicted stock prices through this interface. The frontend uses React for the UI components, with Node.js and Express.js handling API connections between the frontend and the backend services. The dashboard retrieves predictions that are stored in MongoDB and presents them to users in an accessible format.
+
+2. Backend (Flask):
+The backend is powered by Flask and handles all API calls made to MongoDB and interactions with the stock list, which is maintained as a JSON file. This Flask application serves as the central hub for data operations, managing requests from the frontend and coordinating with the database.
+
+3. LLM Prediction Module (Isolated Local Service):
+This is the core intelligence of the system and runs as an isolated module locally. This architecture abstracts the layer between stock prediction updates on MongoDB and users calling for that data. The prediction module itself has two key components:
+
+   a. Fine-Tuned Large Language Model for Sentiment Analysis:
+   Aayush uses a fine-tuned Llama 3.1 8B model with Q5 quantization, specifically from the FinLLM class of models available on Hugging Face. This model is specialized for financial data and generates an "impact score" based on sentiment analysis of financial news and data. The data source for sentiment analysis is Yahoo Finance, accessed through the yfinance Python library, which provides a convenient API for retrieving financial news and market data.
+
+   b. LSTM Model for Time-Series Forecasting:
+   Alongside the sentiment analysis, Aayush has implemented an LSTM (Long Short-Term Memory) neural network model that predicts stock price trends based on historical data. This time-series forecasting component provides the quantitative prediction that, combined with the sentiment impact score, offers a comprehensive view of potential stock movement.
+
+Technical Implementation:
+
+The project demonstrates several advanced technical concepts:
+- RESTful API design and implementation using Flask
+- Integration of React frontend with backend services
+- Working with Large Language Models and fine-tuning for domain-specific tasks
+- Implementation of LSTM neural networks for time-series prediction
+- Data pipeline creation for financial data extraction and preprocessing
+- Database design and management using MongoDB
+- Docker containerization for deployment
+
+Deployment:
+
+The application has been deployed locally using Docker, with a Docker Compose YAML configuration file that orchestrates the different components. While not yet deployed to production, this local deployment demonstrates the application's readiness for cloud deployment and shows Aayush's understanding of containerization and deployment practices.
+
+Current Status:
+
+As an ongoing project, Aayush continues to work on refining the LSTM model and improving prediction accuracy. The project serves both as his capstone requirement and as a demonstration of his ability to build complex, multi-component AI-powered applications.
+
+Bloom Mind: Mental Health Assessment Web App (January 2025 - April 2025)
+
+Bloom Mind is a mental health assessment application that uses natural language processing and machine learning to analyze text input and provide mental health insights.
+
+Project Concept and Evolution:
+
+The initial vision for Bloom Mind was to understand the impact of social media usage on individuals' mental health. The original plan involved using social media APIs like Meta Graph API or Twitter API to fetch user data and analyze it. However, due to data compliance issues and privacy concerns with accessing social media APIs, the project pivoted to a user-input-based approach.
+
+In its final implementation, users are presented with an open-ended input field where they can type what they are feeling. This approach respects user privacy while still allowing for meaningful mental health assessment. Users can describe situations where posts or other users hurt their feelings, or they can simply share generic text about their emotional state.
+
+Machine Learning Model:
+
+The core of Bloom Mind is a Support Vector Machine (SVM) classifier trained on a carefully curated dataset. The training data consisted of tweets that were scraped from Twitter and then labeled by professional psychology students. This human expert labeling ensures that the training data accurately represents different mental health categories and emotional states.
+
+The model achieves high classification accuracy and categorizes input text into several mental health-related classifications:
+- Different types of depression (normal depression and atypical depression)
+- Psychotic behavior indicators
+- Bipolar disorder indicators  
+- Postpartum depression
+- Normal/healthy emotional states
+
+Technical Implementation:
+
+The application is built using a Flask backend that handles the REST API endpoints for text classification and data processing. The backend implements:
+- A comprehensive text preprocessing pipeline using NLTK (Natural Language Toolkit)
+- Tokenization to break down text into meaningful units
+- Stemming to reduce words to their root forms
+- The trained SVM classifier using Scikit-learn for prediction
+
+The frontend is built with React, providing a clean and user-friendly interface where users can input their text and receive assessments. The React application makes API calls to the Flask backend, creating a seamless user experience.
+
+Technical Stack:
+- Backend: Flask (Python)
+- Frontend: React (JavaScript)
+- ML Libraries: Scikit-learn, NLTK, Pandas
+- Classifier: Support Vector Machine (SVM)
+
+Impact:
+
+Bloom Mind represents Aayush's ability to apply NLP and machine learning to solve real-world problems in the mental health space. The project demonstrates his understanding of both the technical aspects (ML model training, text preprocessing) and the practical considerations (privacy concerns, user experience) of building AI applications.
+
+Indian Textile Motif Generation using GAN (January 2025 - April 2025)
+
+This project explores the use of Generative Adversarial Networks (GANs) to create original Indian textile patterns, combining machine learning with cultural art forms.
+
+Project Approach:
+
+Aayush built a conditional GAN (cGAN) completely from scratch using TensorFlow. This wasn't a matter of using pre-built GAN libraries—he implemented the entire generator-discriminator architecture and created a custom training loop. This demonstrates deep understanding of GAN architecture, adversarial training dynamics, and neural network implementation.
+
+Dataset Creation:
+
+One of the most challenging aspects of this project was creating an appropriate dataset. Since no suitable dataset of Indian textile motifs existed for this purpose, Aayush had to build one from the ground up:
+
+1. Image Scraping:
+He scraped images of Indian textile patterns from various online sources, collecting a diverse range of traditional motifs and designs.
+
+2. Preprocessing with OpenCV:
+Using OpenCV (Open Source Computer Vision Library), Aayush preprocessed the collected images:
+- Tiling: Breaking larger textile patterns into smaller, consistent tiles
+- Creating uniform image sizes suitable for GAN training
+- Quality filtering to ensure suitable training data
+
+3. Data Augmentation:
+To expand the dataset, Aayush applied various augmentation techniques:
+- Rotation at different angles
+- Skewing and perspective transformations
+- Other geometric transformations to increase dataset variety
+
+After augmentation, the final dataset contained approximately 5,000 images—sufficient for training a GAN, which is generally considered a low-data architecture compared to other deep learning approaches.
+
+GAN Architecture:
+
+The conditional GAN architecture Aayush implemented includes:
+- A generator network that creates synthetic textile motif images
+- A discriminator network that evaluates whether images are real or generated
+- A custom training loop that balances the adversarial training between generator and discriminator
+- Conditioning mechanisms that allow some control over the generation process
+
+Technical Implementation:
+
+The entire project was built in TensorFlow, demonstrating Aayush's proficiency with this deep learning framework. Building a GAN from scratch requires understanding of:
+- Neural network architecture design
+- Loss function implementation for adversarial training
+- Training stability techniques
+- Gradient flow and backpropagation in adversarial settings
+
+Outcomes:
+
+The project successfully generated original Indian textile motifs that captured the essence and patterns of traditional Indian textiles. The generated designs showed the characteristic features of Indian textile art while being entirely novel creations.
+
+Significance:
+
+This project demonstrates Aayush's ability to:
+- Work on creative applications of AI
+- Build complex neural network architectures from scratch
+- Handle the entire machine learning pipeline from data collection to model deployment
+- Apply GANs to cultural and artistic domains
+- Solve practical challenges like limited data through augmentation
+
+Technical Project Skills Demonstrated
+
+Across these projects, Aayush has demonstrated proficiency in:
+
+Full-Stack Development:
+- Frontend: React, HTML, CSS, JavaScript
+- Backend: Flask, FastAPI, Node.js, Express.js
+- Database: MongoDB, JSON-based data storage
+- API Development: RESTful API design and implementation
+
+Machine Learning & AI:
+- Deep Learning: Neural networks, LSTM, GRU, GANs
+- NLP: Text preprocessing, tokenization, stemming, sentiment analysis
+- Classical ML: SVM, classification algorithms
+- Model Training: Custom training loops, model fine-tuning
+- Framework Proficiency: TensorFlow, Scikit-learn, NLTK
+
+Data Engineering:
+- Data collection: Web scraping, API integration
+- Data preprocessing: Image processing with OpenCV, text preprocessing with NLTK
+- Data augmentation techniques
+- Working with various data formats (CSV, JSON, images)
+
+Development Practices:
+- Version control with Git
+- Containerization with Docker
+- API testing with Postman
+- Problem decomposition and system design
+- End-to-end project implementation
+
+These projects collectively showcase Aayush's ability to conceptualize, design, and implement complex technical solutions that combine multiple technologies and demonstrate both breadth and depth in his technical capabilities.

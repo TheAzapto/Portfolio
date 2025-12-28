@@ -16,7 +16,7 @@ function Navbar() {
 
     return (
         <div className="navbar">
-            <div className="logo">Aayush Dutta</div>
+            <div className="logo" onClick={() => navigate('/')}>Aayush Dutta</div>
             <nav>
                 <div className="burger-menu" onClick={toggleMenu}>
                     <span className={burgerClass}></span>

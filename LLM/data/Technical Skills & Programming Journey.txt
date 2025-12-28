@@ -1,0 +1,59 @@
+Technical Skills & Programming Journey
+
+Aayush Dutta's journey in programming began at a young age and has evolved into a comprehensive skill set spanning multiple domains of software development, artificial intelligence, and machine learning.
+
+Early Programming Experience
+
+Aayush was first introduced to programming as a concept in Grade 7, where he learned very basic Python. This initial exposure sparked his interest in the field, though it was just the beginning of his coding journey.
+
+His formal programming education began in earnest in Grade 9, when he was fully introduced to Python and its core concepts. However, before diving into text-based programming, Aayush's teachers used Scratch to help him understand fundamental programming concepts like loops, variable assignment, and basic logic. This visual approach to learning programming provided him with a strong conceptual foundation that he later translated into Python code.
+
+In Grades 11 and 12, Aayush took Computer Science as his elective subject, solidifying his decision to pursue Computer Science Engineering as his career path. By this time, he had decided that this was what he wanted to pursue in life, and he committed fully to developing his skills in this domain.
+
+Programming Languages
+
+Aayush is proficient in multiple programming languages, with Python being his primary and strongest language. He has been working with Python for several years now and has used it extensively in various projects, from automation scripts to machine learning models.
+
+Beyond Python, Aayush is skilled in JavaScript, which he uses for web development projects, particularly for frontend and backend development. He also knows Java and SQL (specifically MySQL), which he has used in various academic and personal projects. Additionally, he is familiar with HTML5 and CSS for web development.
+
+Backend Development Expertise
+
+Aayush has significant experience in backend development, having worked with multiple frameworks and tools. He is proficient in Flask and FastAPI, which he has used extensively in his projects for building RESTful APIs and web services. He also has experience with Django for more comprehensive web application development.
+
+For full-stack development, Aayush has worked with Node.js and Express.js, often using them in conjunction with React for the frontend. He understands the architecture of RESTful API development and has implemented various API endpoints for database operations and data retrieval in his projects.
+
+Database Knowledge
+
+Aayush works comfortably with both SQL and NoSQL databases. He has practical experience with MySQL for relational database management and MongoDB for document-based storage. He understands database design principles and has implemented database operations in multiple projects, including the Finnalyze stock prediction application where he used MongoDB for storing predictions and stock data.
+
+AI/ML Specialization
+
+Aayush's specialization lies in Artificial Intelligence and Machine Learning. He has worked extensively with Large Language Models (LLMs), Natural Language Processing (NLP), Deep Learning, Generative Adversarial Networks (GANs), and time-series forecasting using LSTM and GRU networks.
+
+His ML toolkit includes TensorFlow for building deep learning models, Scikit-learn for traditional machine learning algorithms, and NLTK for natural language processing tasks. He is also proficient with data science libraries like Pandas for data manipulation, NumPy for numerical computing, Matplotlib and Seaborn for data visualization.
+
+Aayush has practical experience fine-tuning large language models, having worked with Llama 3.1 8B (Q5 quantization) models for financial sentiment analysis in his capstone project. He understands the architecture of neural networks and has built GANs from scratch with custom training loops.
+
+Development Tools & Practices
+
+Aayush is well-versed in modern development tools and practices. He uses Git for version control and understands collaborative development workflows. He has experience with Docker for containerization and has used it for local deployment of applications with Docker Compose.
+
+For API development and testing, he uses tools like Postman and Swagger. He works in Jupyter notebooks for data analysis and model development, and he is comfortable with Power BI for data visualization and business intelligence.
+
+Operating Systems
+
+Aayush primarily works on Windows but has significant experience with Linux through WSL2 (Windows Subsystem for Linux 2), which he uses regularly. This gives him familiarity with Linux command-line operations, shell scripting, and Unix-based development environments.
+
+Core Computer Science Concepts
+
+Beyond specific technologies, Aayush has a strong foundation in core computer science concepts. He understands data structures and algorithms well, having practiced problem-solving and algorithmic thinking throughout his education. He is familiar with object-oriented programming principles, design patterns, and has knowledge of multithreading concepts.
+
+Learning Approach
+
+Aayush has a systematic approach to learning new technologies. He typically starts with structured courses, even if they're just YouTube tutorials, to understand the theoretical concepts. Then he follows along with tutorials while building projects to understand the practical application of these concepts. Finally, he works on personal projects to apply his learning independently and solidify his understanding.
+
+When solving technical problems, Aayush follows a methodical approach: he first reads official documentation, then seeks opinions from people who have worked on similar problems, checks Stack Overflow or similar online channels, examines related projects to see how they addressed similar issues, and only then brings in AI tools. Even when using AI, he prefers to ask for approaches to solutions rather than solutions themselves, as he likes to write code himself and understand how systems work before implementing them.
+
+Automation and Scripting
+
+Aayush has practical experience building automation scripts. During the pandemic, he created a simple Python script for automatic class management that would ensure he joined online classes on time every day. During his internship at the Alumni Relations Department, he developed Python automation scripts to extract and update alumni data from LinkedIn, demonstrating his ability to identify opportunities for automation and implement practical solutions.

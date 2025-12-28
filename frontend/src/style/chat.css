@@ -138,3 +138,63 @@
     word-wrap: break-word;
     
 }
+
+.content{
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Introduction{
+    font-size: 1.5em;
+    margin-bottom: 10vh;
+    gap: 1em;
+}
+
+.Introduction p{
+    font-size: .8em;
+    width: 10rem;
+    text-align: left;
+    margin-bottom: 0.1em;
+    padding:1.5em;
+    background-color: #24242488;
+    border-radius: 1em;
+
+}
+
+
+
+#query{
+    width: 50vw;
+    height: 40px;
+    padding: 0.5em 1.5em;
+    font-size: 18px;
+    border-radius: 1em;
+    border: none;
+    text-wrap: wrap;
+    background-color: var(--chat-background-color);
+}
+
+#send {
+    width: 50px;
+    cursor: pointer;
+    height: 50px;
+    margin-left: 1em;
+    border-radius: 100%;
+    border: none;
+}
+
+.inputarea{
+margin-bottom: 3em;
+}
+
+#send-button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+    margin-left: 1em;
+}
