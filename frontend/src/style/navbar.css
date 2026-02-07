@@ -3,15 +3,19 @@
     justify-content: space-between;
     align-items: center;
     height: 8vh;
+    padding: 0 5vw; /* Added padding to sides */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
     font-size: 2em;
     font-weight: bold;
     cursor: pointer;
-    flex-grow: 3;
-    padding-left: 5vw;
-    z-index: -1;
+    /* padding-left: 5vw; Removed in favor of container padding */
+    z-index: 101; /* Ensure logo is above menu overlay */
+    position: relative;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5); /* Visibility against content */
 }
 
 nav {
@@ -20,51 +24,59 @@ nav {
     background-color: transparent;
     display: flex;
     justify-content: flex-end;
-    padding: 1em;
-    z-index: 1;
+    align-items: center;
+    z-index: 101; /* Ensure burger is above overlay */
 }
 
 .burger-menu {
-    height: 50%;
+    height: 2em;
+    width: 2em;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end; /* Align right */
     justify-content: space-between;
     flex-direction: column;
     cursor: pointer;
 }
 
 .burger-bar {
-    width: 2em;
-    height: 0.2em;
-    border-radius: 10%;
-    background-color: var(--secondary-color);
     transition: all 0.3s cubic-bezier(0.29, 1.01, 1, -0.68);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    padding:1vh 1vw 5vh 5vw;
-    background-color: var(--accent-color);
+    position: fixed; /* Fixed to cover screen */
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 100vw; /* Full screen overlay */
+    background-color: rgba(174, 0, 255, 0.95); /* High opacity accent */
     backdrop-filter: blur(10px);
     font-weight: bold;
-    z-index: 0;
-    transition: all 0.3s ease-in-out;
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
-    /* filter: drop-shadow(0px 0px 10px var(--secondary-color)); */
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+    clip-path: circle(0px at 100% 0%); /* Circular reveal from top right */
+}
+
+.menu.visible {
+    clip-path: circle(150% at 100% 0%);
+}
+
+.menu.hidden {
+    clip-path: circle(0px at 100% 0%);
 }
 
 .menu ul {
-    padding: 0 1em 0 0;
+    padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     height: 100%;
 }
 
@@ -72,35 +84,19 @@ nav {
     text-transform: uppercase;
     font-size: 3em;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Dark text on accent bg */
+    transition: transform 0.3s ease;
 }
 
 .menu ul li:hover{
-    color: var(--secondary-color);
+    color: white;
+    transform: scale(1.1);
 }
 
-/* .holder{
-    height: 5em;
-    width: 6em;
-    flex-grow: 1;
-} */
-
-.hidden{
-    right: -100%;
-    top: -100%
-}
-
-.visible{
-    right: 0;
-    top:0;
-}
-
-.open{
-    color: var(--accent-color);
-}
-
-.close{
-    color: var(--secondary-color);
+@media (max-width: 768px) {
+    .menu ul li {
+        font-size: 2.5em;
+    }
 }

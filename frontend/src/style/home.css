@@ -2,10 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh; /* Use dvh */
     width: 100vw;
-    /* background-color: #24242444; */
-    /* backdrop-filter: blur(5px); */
 }
 
 .text-center {
@@ -14,6 +12,7 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    width: 100%;
 }
 
 
@@ -21,6 +20,8 @@
     font-size: 8rem;
     color: var(--accent-color);
     text-transform: uppercase;
+    text-align: center;
+    width: 100%;
 }
 
 .text-holder h1{
@@ -37,7 +38,7 @@
     padding-left: 10%;
     padding-right: 10%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center; /* Centered for better mobile/desktop balance */
     align-items: center;
     flex-grow: 1;
     gap: 2rem;
@@ -78,4 +79,33 @@
     width: 100%;
     padding-left: 10%;
     font-size: 1.5rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .text-4xl {
+        font-size: 4rem; /* Smaller title on mobile */
+        margin-bottom: 2rem;
+    }
+
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+
+    .button-holder {
+        flex-direction: column;
+        width: 90%;
+        padding: 0;
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+    
+    .HomeWrapper {
+        flex-direction: column;
+        padding-top: 8vh; /* Account for navbar */
+    }
+
+    .cardHolder {
+        display: none;
+    }
 }

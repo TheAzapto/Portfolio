@@ -1,6 +1,6 @@
-Academic Projects Portfolio
+Projects
 
-Aayush Dutta has worked on several significant technical projects during his time at NIIT University, demonstrating his skills in full-stack development, artificial intelligence, machine learning, and data science. These projects showcase his ability to tackle complex problems and implement end-to-end solutions.
+Aayush Dutta has worked on several significant projects during his time at NIIT University, demonstrating his skills in full-stack development, artificial intelligence, machine learning, and data science. These projects showcase his ability to tackle complex problems and implement end-to-end solutions.
 
 Finnalyze - Stock Market Impact Predictor (September 2025 - Present)
 

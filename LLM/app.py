@@ -24,16 +24,16 @@ app.add_middleware(
 PERSIST_DIRECTORY = "./chroma_db"
 OLLAMA_MODEL = "llama3.1:8b"
 
-embeddings = OllamaEmbeddings(model=OLLAMA_MODEL)
+embeddings = OllamaEmbeddings(model=OLLAMA_MODEL, base_url="http://127.0.0.1:11434")
 vectorstore = Chroma(
     persist_directory=PERSIST_DIRECTORY,
     embedding_function=embeddings
 )
-llm = OllamaLLM(model=OLLAMA_MODEL)
+llm = OllamaLLM(model=OLLAMA_MODEL, base_url="http://127.0.0.1:11434")
 
 # Custom prompt template
 template = """You are a personal AI assistant representing the person whose information is in the context below. 
-Answer questions as if you are this person, using first person perspective. Be conversational and natural.
+Answer questions as if you are this person, using first person perspective. Be conversational and natural. avoid asking questions.
 If you don't know something based on the context, politely say so.
 
 Context: {context}
@@ -74,14 +74,16 @@ async def generate_response(query: str) -> AsyncGenerator[str, None]:
             await asyncio.sleep(0.05)  # Small delay for streaming effect
             
     except Exception as e:
+        print(e)
         yield f"data: [Error: {str(e)}]\n\n"
 
-@app.post("/chat")
+@app.post("/api/chat")
 async def chat(request: ChatRequest):
     """Chat endpoint with SSE streaming"""
     if not request.query.strip():
         raise HTTPException(status_code=400, detail="Query cannot be empty")
     
+    print('api called')
     return StreamingResponse(
         generate_response(request.query),
         media_type="text/event-stream"
@@ -106,4 +108,4 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=5000)
+    uvicorn.run(app, host="0.0.0.0", port=5002)
